@@ -24,6 +24,28 @@ Inthe terminal of backend:
 
  npm i express nodemon
 
+ make some changes in package.json
+
+ {
+  "name": "backend",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
+  }
+}
+
+
 make index.js & config.js 
 
 to test the server
