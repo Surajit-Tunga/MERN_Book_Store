@@ -131,11 +131,11 @@ To connect your MERN Book Store project to a free online MongoDB database, follo
   mongodb+srv://Surajit:<db_password>@mern-bookstore.qjleocp.mongodb.net/?retryWrites=true&w=majority&appName=MERN-BookStore
   ```
 
-- Replace `<db_password>` with your actual password.
+- Replace url with your actual connection string.
 
 ### 3. Add the Connection String to `config.js`
 
-Create or update your `config.js` in the root of your backend:
+Ipdate your `config.js` in the root of your backend:
 
 ```js
 export const mongoDBURL = 'mongodb+srv://Surajit:<db_password>@mern-bookstore.qjleocp.mongodb.net/?retryWrites=true&w=majority&appName=MERN-BookStore';
