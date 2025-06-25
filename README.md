@@ -1,32 +1,45 @@
 # MERN_Book_Store
 
-MERN 
-M(MogoDB): A noSQL Database.
-E(ExpressJS): A Web Freamwork.
-R(ReactJS): UI Building JavaScript Library.
+MERN  
+M(MogoDB): A noSQL Database.  
+E(ExpressJS): A Web Freamwork.  
+R(ReactJS): UI Building JavaScript Library.  
 N(NodeJs): Serve side JavaScript Environment.
 
-initial File setup:
-project--
-      - Backend
-      - Frontend
-      -.gitignore
-      -Redme.md
+## initial File setup:
+```
+project
+│
+├── Backend      # Node.js, Express, MongoDB backend code
+├── Frontend     # React.js frontend code
+├── .gitignore   # Git ignored files and directories
+└── Redme.md     # Project documentation (this file)
+```
 
-Backend SetUp:
+---
 
+### Backend SetUp:
+
+```bash
 cd Backend
+```
 
-Inthe terminal of backend:
- npm init - y   //adds a package that json to our project
+In the terminal of backend:
 
- next add express and nodemon 
+```bash
+npm init -y   # adds a package.json to our project
+```
 
- npm i express nodemon
+Next, add express and nodemon:
 
- make some changes in package.json
+```bash
+npm i express nodemon
+```
 
- {
+Make some changes in `package.json`:
+
+```json
+{
   "name": "backend",
   "version": "1.0.0",
   "type": "module",
@@ -44,27 +57,30 @@ Inthe terminal of backend:
     "nodemon": "^3.1.10"
   }
 }
+```
 
+Create `index.js` & `config.js`.
 
-make index.js & config.js 
+To test the server, in `index.js`:
 
-to test the server
-in index.js
-
+```js
 import express from "express";
-import {PORT} from "./config.js";
+import { PORT } from "./config.js";
 
 const app = express();
 
-app.listen(PORT, ()=> {
-    console.log(`Every Thing is ok to port: ${PORT}`)
-
+app.listen(PORT, () => {
+    console.log(`Every Thing is ok to port: ${PORT}`);
 });
+```
 
-in config.js 
+In `config.js`:
 
+```js
 export const PORT = 5555;
+```
 
-output in bash:
-
+**Output in bash:**
+```
 Every Thing is ok to port: 5555
+```
