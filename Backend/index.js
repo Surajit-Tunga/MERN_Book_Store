@@ -10,16 +10,19 @@ app.get("/", (request, response)=>{
 
 });
 
-app.listen(PORT, ()=> {
-    console.log(`Every Thing is ok to port: ${PORT}`)
 
-});
 
 mongoose
   .connect(mongoDBURL)
   .then(()=>{
+    console.log("App is connected to database")
+    app.listen(PORT, ()=> {
+    console.log(`Every Thing is ok to port: ${PORT}`)
+
+});
 
   })
-  .catch(()=>{
+  .catch((error)=>{
+    console.log(error);
     
   })
